@@ -1,0 +1,93 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Copy = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local TxtLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(65, 239, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-6.2217282e-08, 0, 0, 0)
+Frame.Size = UDim2.new(0, 981, 0, 646)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.31396535, 0, 0.360681117, 0)
+TextLabel.Size = UDim2.new(0, 398, 0, 199)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Ravy"
+TextLabel.TextColor3 = Color3.fromRGB(51, 82, 255)
+TextLabel.TextSize = 100.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.417940885, 0, 0.591331303, 0)
+TextLabel_2.Size = UDim2.new(0, 194, 0, 42)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "80% UNC"
+TextLabel_2.TextColor3 = Color3.fromRGB(110, 129, 255)
+TextLabel_2.TextSize = 40.000
+TextLabel_2.TextWrapped = true
+
+Copy.Name = "Copy"
+Copy.Parent = Frame
+Copy.BackgroundColor3 = Color3.fromRGB(0, 132, 255)
+Copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Copy.BorderSizePixel = 0
+Copy.Position = UDim2.new(0.417940885, 0, 0.667182684, 0)
+Copy.Size = UDim2.new(0, 200, 0, 50)
+Copy.Font = Enum.Font.Unknown
+Copy.Text = "Click Me!"
+Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Copy.TextSize = 25.000
+Copy.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+UICorner.Parent = Copy
+
+TxtLabel.Name = "TxtLabel"
+TxtLabel.Parent = Frame
+TxtLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TxtLabel.BackgroundTransparency = 1.000
+TxtLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TxtLabel.BorderSizePixel = 0
+TxtLabel.Position = UDim2.new(0.414882779, 0, 0.769349873, 0)
+TxtLabel.Size = UDim2.new(0, 200, 0, 50)
+TxtLabel.Visible = false
+TxtLabel.Font = Enum.Font.Unknown
+TxtLabel.Text = "https://discord.gg/qjMFDNJS"
+TxtLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TxtLabel.TextSize = 25.000
+TxtLabel.TextStrokeColor3 = Color3.fromRGB(0, 229, 255)
+TxtLabel.TextStrokeTransparency = 0.000
+
+-- Scripts:
+
+local function CFQPKFU_fake_script() -- Copy.LocalScript 
+	local script = Instance.new('LocalScript', Copy)
+
+	script.Parent.MouseButton1Click:Connect(function() 
+		script.Parent.Parent.TxtLabel.Visible = true
+		wait(0.1)
+	end)
+end
+coroutine.wrap(CFQPKFU_fake_script)()
